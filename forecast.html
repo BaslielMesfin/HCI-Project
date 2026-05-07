@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7-Day Forecast - Weather</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/accessibility.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-nav focus-ring">Skip to main content</a>
+
+  <div class="app-layout">
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" aria-label="Main Navigation">
+      <a href="index.html" class="sidebar-brand focus-ring" aria-label="Weather Home">
+        <div class="sidebar-brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17.5 19C19.9853 19 22 16.9853 22 14.5C22 12.1325 20.1772 10.2017 17.8546 10.0156C17.3828 6.61111 14.4682 4 11 4C7.13401 4 4 7.13401 4 11C4 11.2335 4.01146 11.4645 4.03362 11.692C1.78208 12.2855 0 14.4332 0 17C0 19.7614 2.23858 22 5 22H17.5V19Z" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="sidebar-brand-text">
+          <span class="sidebar-brand-name">Weather</span>
+          <span class="sidebar-brand-tagline">Calm Forecasting</span>
+        </div>
+      </a>
+
+      <div class="nav-list" role="list">
+        <a href="index.html" class="nav-link focus-ring" role="listitem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="3" y="3" width="7" height="7" rx="1" />
+            <rect x="14" y="3" width="7" height="7" rx="1" />
+            <rect x="14" y="14" width="7" height="7" rx="1" />
+            <rect x="3" y="14" width="7" height="7" rx="1" />
+          </svg>
+          Dashboard
+        </a>
+        <a href="locations.html" class="nav-link focus-ring" role="listitem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M9 20L3 17V4L9 7M9 20L15 17M9 20V7M15 17L21 20V7L15 4M15 17V4M9 7L15 4" />
+          </svg>
+          Map
+        </a>
+        <a href="forecast.html" class="nav-link nav-link--active focus-ring" role="listitem" aria-current="page">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M12 8V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" />
+          </svg>
+          History
+        </a>
+        <a href="settings.html" class="nav-link focus-ring" role="listitem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+            <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          Settings
+        </a>
+      </div>
+
+      <!-- <div class="sidebar-footer">
+        <button class="btn btn-upgrade focus-ring">Upgrade to Pro</button>
+      </div> -->
+    </nav>
+
+    <!-- Content Wrap -->
+    <div style="flex: 1; display: flex; flex-direction: column;">
+      
+      <!-- Main Content Area -->
+      <main id="main-content" class="main-content" tabindex="-1">
+        <div class="main-inner">
+          
+          <header class="page-header">
+            <h1 style="display: flex; align-items: center; gap: var(--space-2);">Detailed 7-Day Forecast</h1>
+            <p style="display: flex; align-items: center; gap: var(--space-2);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" width="16" height="16">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              Kyoto, Japan
+            </p>
+          </header>
+
+          <div class="two-col-layout">
+            
+            <!-- Left Col (Forecast Details) -->
+            <section aria-label="Detailed daily forecast">
+              
+              <!-- Today's Highlight Card -->
+              <div class="card forecast-detail-card" style="margin-bottom: var(--space-6);">
+                <div class="forecast-detail-header">
+                  <div class="forecast-detail-date">
+                    <div class="forecast-detail-date-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6.999 12C6.999 9.239 9.238 7 12 7C14.761 7 17 9.239 17 12C17 12.046 16.999 12.093 16.997 12.139C16.999 12.204 17 12.269 17 12.333C17 14.911 14.911 17 12.333 17H6.999C4.238 17 2 14.761 2 12C2 9.239 4.238 7 6.999 7ZM12 5C8.134 5 5 8.134 5 12C5 12.139 5.011 12.277 5.033 12.413C2.756 12.833 1 14.717 1 17.001C1 19.762 3.239 22 6 22H17.333C20.463 22 23 19.462 23 16.333C23 13.567 21.022 11.26 18.397 10.778C17.653 7.42 15.08 5 12 5Z"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h3>Today, Oct 24</h3>
+                      <p>Breezy with scattered clouds</p>
+                    </div>
+                  </div>
+                  <div class="forecast-detail-temp" aria-label="High 72, Low 58">
+                    <div class="temp-big">72°</div>
+                    <div class="temp-low">Low 58°</div>
+                  </div>
+                </div>
+
+                <div class="tod-grid" role="list" aria-label="Time of day breakdown">
+                  
+                  <div class="tod-card" role="listitem" tabindex="0" aria-label="Morning, 62 degrees, 10% chance of rain">
+                    <div class="tod-label">MORNING</div>
+                    <div class="tod-icon" style="color: var(--color-info);" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6.999 12C6.999 9.239 9.238 7 12 7C14.761 7 17 9.239 17 12C17 12.046 16.999 12.093 16.997 12.139C16.999 12.204 17 12.269 17 12.333C17 14.911 14.911 17 12.333 17H6.999C4.238 17 2 14.761 2 12C2 9.239 4.238 7 6.999 7ZM12 5C8.134 5 5 8.134 5 12C5 12.139 5.011 12.277 5.033 12.413C2.756 12.833 1 14.717 1 17.001C1 19.762 3.239 22 6 22H17.333C20.463 22 23 19.462 23 16.333C23 13.567 21.022 11.26 18.397 10.778C17.653 7.42 15.08 5 12 5Z"/>
+                      </svg>
+                    </div>
+                    <div class="tod-temp">62°</div>
+                    <div class="tod-precip">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M12 21A6 6 0 0 1 6 15C6 11 12 3 12 3S18 11 18 15A6 6 0 0 1 12 21Z"/></svg>
+                      10%
+                    </div>
+                  </div>
+
+                  <div class="tod-card tod-card--active" role="listitem" tabindex="0" aria-label="Afternoon, 72 degrees, 0% chance of rain">
+                    <div class="tod-label">AFTERNOON</div>
+                    <div class="tod-icon" style="color: var(--color-primary);" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        <circle cx="12" cy="12" r="5" />
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                      </svg>
+                    </div>
+                    <div class="tod-temp">72°</div>
+                    <div class="tod-precip">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M12 21A6 6 0 0 1 6 15C6 11 12 3 12 3S18 11 18 15A6 6 0 0 1 12 21Z"/></svg>
+                      0%
+                    </div>
+                  </div>
+
+                  <div class="tod-card" role="listitem" tabindex="0" aria-label="Night, 58 degrees, 5% chance of rain">
+                    <div class="tod-label">NIGHT</div>
+                    <div class="tod-icon" style="color: var(--color-text-secondary);" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                      </svg>
+                    </div>
+                    <div class="tod-temp">58°</div>
+                    <div class="tod-precip">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M12 21A6 6 0 0 1 6 15C6 11 12 3 12 3S18 11 18 15A6 6 0 0 1 12 21Z"/></svg>
+                      5%
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Upcoming Days List -->
+              <div class="card card--no-hover" style="padding: var(--space-4) 0;" aria-label="Upcoming Days">
+                
+                <div class="forecast-row focus-ring" tabindex="0" aria-label="Friday, October 25th. Rainy. High 65, Low 50.">
+                  <div class="forecast-row-date">Fri, Oct 25</div>
+                  <div class="forecast-row-icon" style="color: var(--color-info);" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.999 12C6.999 9.239 9.238 7 12 7C14.761 7 17 9.239 17 12C17 12.046 16.999 12.093 16.997 12.139C16.999 12.204 17 12.269 17 12.333C17 14.911 14.911 17 12.333 17H6.999C4.238 17 2 14.761 2 12C2 9.239 4.238 7 6.999 7Z"/></svg>
+                  </div>
+                  <div class="forecast-row-bar" aria-hidden="true">
+                    <div class="forecast-row-bar-fill pattern-dots" style="width: 35%; margin-left: 30%; background-color: var(--chart-blue); color: rgba(255,255,255,0.4);"></div>
+                  </div>
+                  <div class="forecast-row-temps">
+                    <span class="forecast-row-high">65°</span>
+                    <span class="forecast-row-low">50°</span>
+                  </div>
+                </div>
+
+                <div class="forecast-row focus-ring" tabindex="0" aria-label="Saturday, October 26th. Sunny. High 78, Low 55.">
+                  <div class="forecast-row-date">Sat, Oct 26</div>
+                  <div class="forecast-row-icon" style="color: var(--color-primary);" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5" /><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" /></svg>
+                  </div>
+                  <div class="forecast-row-bar" aria-hidden="true">
+                    <div class="forecast-row-bar-fill pattern-lines" style="width: 45%; margin-left: 35%; background: linear-gradient(90deg, var(--chart-purple), var(--chart-pink)); color: rgba(255,255,255,0.4);"></div>
+                  </div>
+                  <div class="forecast-row-temps">
+                    <span class="forecast-row-high">78°</span>
+                    <span class="forecast-row-low">55°</span>
+                  </div>
+                </div>
+
+                <div class="forecast-row focus-ring" tabindex="0" aria-label="Sunday, October 27th. Cloudy. High 70, Low 54.">
+                  <div class="forecast-row-date">Sun, Oct 27</div>
+                  <div class="forecast-row-icon" style="color: var(--color-text-secondary);" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 19C19.985 19 22 16.985 22 14.5C22 12.132 20.177 10.202 17.855 10.016C17.383 6.611 14.468 4 11 4C7.134 4 4 7.134 4 11C4 11.233 4.011 11.464 4.034 11.692C1.782 12.285 0 14.433 0 17C0 19.761 2.239 22 5 22H17.5V19Z" /></svg>
+                  </div>
+                  <div class="forecast-row-bar" aria-hidden="true">
+                    <div class="forecast-row-bar-fill pattern-cross" style="width: 35%; margin-left: 32%; background-color: var(--color-text-muted); color: rgba(255,255,255,0.4);"></div>
+                  </div>
+                  <div class="forecast-row-temps">
+                    <span class="forecast-row-high">70°</span>
+                    <span class="forecast-row-low">54°</span>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+            <!-- Right Col (Trends & Radar) -->
+            <div style="display: flex; flex-direction: column; gap: var(--space-6);">
+              
+              <section class="card trends-card" aria-label="Weekly Trends Chart">
+                <div class="trends-header">
+                  <h3>Weekly Trends</h3>
+                  <button class="btn btn-ghost" style="padding: var(--space-1); min-height: auto;" aria-label="Chart options">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+                  </button>
+                </div>
+                
+                <div class="toggle-group" style="width: 100%; margin-bottom: var(--space-6);" role="radiogroup" aria-label="Chart metric">
+                  <button class="toggle-group-btn toggle-group-btn--active focus-ring" style="flex: 1;" role="radio" aria-checked="true" tabindex="0">Precipitation</button>
+                  <button class="toggle-group-btn focus-ring" style="flex: 1;" role="radio" aria-checked="false" tabindex="-1">Humidity</button>
+                </div>
+
+                <div class="chart-container" style="height: 180px;">
+                  <canvas id="trendsChart" aria-hidden="true"></canvas>
+                  <div class="sr-only">
+                    <table>
+                      <caption>Weekly Precipitation Chart</caption>
+                      <tr><th>Day</th><th>Precipitation Chance</th></tr>
+                      <tr><td>Thursday</td><td>20%</td></tr>
+                      <tr><td>Friday</td><td>40%</td></tr>
+                      <tr><td>Saturday</td><td>30%</td></tr>
+                      <tr><td>Sunday</td><td>10%</td></tr>
+                      <tr><td>Monday</td><td>5%</td></tr>
+                      <tr><td>Tuesday</td><td>15%</td></tr>
+                      <tr><td>Wednesday</td><td>25%</td></tr>
+                    </table>
+                  </div>
+                </div>
+              </section>
+
+              <section class="radar-mini" aria-label="Live Radar Mini Map">
+                <!-- Placeholder for map -->
+                <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=600&auto=format&fit=crop" alt="Map of Kyoto" style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="radar-mini-label" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <circle cx="12" cy="12" r="10" opacity="0.2"/>
+                    <circle cx="12" cy="12" r="6"/>
+                  </svg>
+                  Live Radar
+                </div>
+              </section>
+
+            </div>
+
+          </div>
+
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p>© 2024 Weather. Atmospheric Clarity.</p>
+        <div class="footer-links">
+          <a href="#" class="focus-ring">Privacy Policy</a>
+          <a href="#" class="focus-ring">Terms of Service</a>
+          <a href="#" class="focus-ring">API Documentation</a>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <script src="js/weather-data.js"></script>
+  <script src="js/accessibility.js"></script>
+  <script src="js/chart.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize chart for Forecast Trends
+      if (typeof TrendsChart !== 'undefined') {
+        setTimeout(() => TrendsChart.init('trendsChart'), 100);
+      }
+    });
+  </script>
+</body>
+</html>
