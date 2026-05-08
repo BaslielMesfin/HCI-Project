@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -85,7 +85,7 @@
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                 <circle cx="12" cy="10" r="3" />
               </svg>
-              Kyoto, Japan
+              <span id="forecast-page-location">Kyoto, Japan</span>
             </p>
           </header>
 
@@ -109,8 +109,8 @@
                     </div>
                   </div>
                   <div class="forecast-detail-temp" aria-label="High 72, Low 58">
-                    <div class="temp-big">72°</div>
-                    <div class="temp-low">Low 58°</div>
+                    <div class="temp-big">72&deg;</div>
+                    <div class="temp-low">Low 58&deg;</div>
                   </div>
                 </div>
 
@@ -123,7 +123,7 @@
                         <path d="M6.999 12C6.999 9.239 9.238 7 12 7C14.761 7 17 9.239 17 12C17 12.046 16.999 12.093 16.997 12.139C16.999 12.204 17 12.269 17 12.333C17 14.911 14.911 17 12.333 17H6.999C4.238 17 2 14.761 2 12C2 9.239 4.238 7 6.999 7ZM12 5C8.134 5 5 8.134 5 12C5 12.139 5.011 12.277 5.033 12.413C2.756 12.833 1 14.717 1 17.001C1 19.762 3.239 22 6 22H17.333C20.463 22 23 19.462 23 16.333C23 13.567 21.022 11.26 18.397 10.778C17.653 7.42 15.08 5 12 5Z"/>
                       </svg>
                     </div>
-                    <div class="tod-temp">62°</div>
+                    <div class="tod-temp">62&deg;</div>
                     <div class="tod-precip">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M12 21A6 6 0 0 1 6 15C6 11 12 3 12 3S18 11 18 15A6 6 0 0 1 12 21Z"/></svg>
                       10%
@@ -138,7 +138,7 @@
                         <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
                       </svg>
                     </div>
-                    <div class="tod-temp">72°</div>
+                    <div class="tod-temp">72&deg;</div>
                     <div class="tod-precip">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M12 21A6 6 0 0 1 6 15C6 11 12 3 12 3S18 11 18 15A6 6 0 0 1 12 21Z"/></svg>
                       0%
@@ -152,7 +152,7 @@
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
                       </svg>
                     </div>
-                    <div class="tod-temp">58°</div>
+                    <div class="tod-temp">58&deg;</div>
                     <div class="tod-precip">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M12 21A6 6 0 0 1 6 15C6 11 12 3 12 3S18 11 18 15A6 6 0 0 1 12 21Z"/></svg>
                       5%
@@ -174,8 +174,8 @@
                     <div class="forecast-row-bar-fill pattern-dots" style="width: 35%; margin-left: 30%; background-color: var(--chart-blue); color: rgba(255,255,255,0.4);"></div>
                   </div>
                   <div class="forecast-row-temps">
-                    <span class="forecast-row-high">65°</span>
-                    <span class="forecast-row-low">50°</span>
+                    <span class="forecast-row-high">65&deg;</span>
+                    <span class="forecast-row-low">50&deg;</span>
                   </div>
                 </div>
 
@@ -188,8 +188,8 @@
                     <div class="forecast-row-bar-fill pattern-lines" style="width: 45%; margin-left: 35%; background: linear-gradient(90deg, var(--chart-purple), var(--chart-pink)); color: rgba(255,255,255,0.4);"></div>
                   </div>
                   <div class="forecast-row-temps">
-                    <span class="forecast-row-high">78°</span>
-                    <span class="forecast-row-low">55°</span>
+                    <span class="forecast-row-high">78&deg;</span>
+                    <span class="forecast-row-low">55&deg;</span>
                   </div>
                 </div>
 
@@ -202,8 +202,8 @@
                     <div class="forecast-row-bar-fill pattern-cross" style="width: 35%; margin-left: 32%; background-color: var(--color-text-muted); color: rgba(255,255,255,0.4);"></div>
                   </div>
                   <div class="forecast-row-temps">
-                    <span class="forecast-row-high">70°</span>
-                    <span class="forecast-row-low">54°</span>
+                    <span class="forecast-row-high">70&deg;</span>
+                    <span class="forecast-row-low">54&deg;</span>
                   </div>
                 </div>
 
@@ -222,8 +222,8 @@
                 </div>
                 
                 <div class="toggle-group" style="width: 100%; margin-bottom: var(--space-6);" role="radiogroup" aria-label="Chart metric">
-                  <button class="toggle-group-btn toggle-group-btn--active focus-ring" style="flex: 1;" role="radio" aria-checked="true" tabindex="0">Precipitation</button>
-                  <button class="toggle-group-btn focus-ring" style="flex: 1;" role="radio" aria-checked="false" tabindex="-1">Humidity</button>
+                  <button class="toggle-group-btn toggle-group-btn--active focus-ring" style="flex: 1;" role="radio" aria-checked="true" tabindex="0" data-metric="precipitation">Precipitation</button>
+                  <button class="toggle-group-btn focus-ring" style="flex: 1;" role="radio" aria-checked="false" tabindex="-1" data-metric="humidity">Humidity</button>
                 </div>
 
                 <div class="chart-container" style="height: 180px;">
@@ -244,17 +244,20 @@
                 </div>
               </section>
 
-              <section class="radar-mini" aria-label="Live Radar Mini Map">
-                <!-- Placeholder for map -->
-                <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=600&auto=format&fit=crop" alt="Map of Kyoto" style="width: 100%; height: 100%; object-fit: cover;">
-                <div class="radar-mini-label" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <circle cx="12" cy="12" r="10" opacity="0.2"/>
-                    <circle cx="12" cy="12" r="6"/>
-                  </svg>
-                  Live Radar
+              <!-- <section class="radar-mini" aria-label="Live Radar Mini Map">
+                <div class="radar-map" id="forecast-map" aria-hidden="true"></div>
+                <div class="radar-mini-label">
+                  <div>
+                    <strong id="forecast-map-title">Live Radar</strong>
+                    <span id="forecast-map-desc">Scattered showers moving through the region.</span>
+                  </div>
                 </div>
-              </section>
+                <div class="radar-controls" aria-label="Map layer controls">
+                  <button class="radar-control-btn focus-ring" data-map-layer="radar" aria-pressed="true">Radar</button>
+                  <button class="radar-control-btn focus-ring" data-map-layer="temp" aria-pressed="false">Temp</button>
+                  <button class="radar-control-btn focus-ring" data-map-layer="precip" aria-pressed="false">Precip</button>
+                </div>
+              </section> -->
 
             </div>
 
@@ -265,7 +268,7 @@
 
       <!-- Footer -->
       <footer class="footer">
-        <p>© 2024 Weather. Atmospheric Clarity.</p>
+        <p>&copy; 2026 Weather. Atmospheric Clarity.</p>
         <div class="footer-links">
           <a href="#" class="focus-ring">Privacy Policy</a>
           <a href="#" class="focus-ring">Terms of Service</a>
@@ -290,3 +293,5 @@
   </script>
 </body>
 </html>
+
+
