@@ -73,7 +73,22 @@
 
     <!-- Main Content Area -->
     <main id="main-content" class="main-content" tabindex="-1">
-      <div class="main-inner dashboard-grid">
+      <div class="main-inner dashboard-grid">        <!-- Location Permission Notice -->
+        <div id="location-notice" class="location-notice" hidden>
+          <div class="location-notice-copy">
+            <span class="location-notice-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 1 1 18 0Z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </span>
+            <span id="location-notice-text">Enable location access to get real weather data for your area.</span>
+          </div>
+          <div class="location-notice-actions">
+            <button class="btn btn-primary focus-ring" data-action="use-current-location">Use my location</button>
+            <button id="location-notice-close" class="icon-btn focus-ring" aria-label="Dismiss location message">x</button>
+          </div>
+        </div>
         
         <!-- Left/Center Column -->
         <div class="dashboard-main">
@@ -85,7 +100,7 @@
               <p class="hero-datetime" id="current-date">Thursday, 10:42 AM</p>
               
               <div class="hero-temp-group">
-                <span class="hero-temp" id="current-temp">62</span><span class="hero-temp-unit">°F</span>
+                <span class="hero-temp" id="current-temp">62</span><span class="hero-temp-unit">&deg;F</span>
               </div>
             </div>
             
@@ -97,7 +112,7 @@
                 </svg>
               </div>
               <div class="hero-condition" id="current-condition">Partly Cloudy</div>
-              <div class="hero-feels" id="current-feels">Feels like <span id="current-feels-val">60</span>°</div>
+              <div class="hero-feels" id="current-feels">Feels like <span id="current-feels-val">60</span>&deg;</div>
             </div>
           </section>
 
@@ -124,7 +139,7 @@
                 </svg>
                 Wind
               </div>
-              <div class="stat-card-value"><span class="value-large" id="stat-wind">12</span> mph</div>
+              <div class="stat-card-value"><span class="value-large" id="stat-wind">12</span> <span id="stat-wind-unit">mph</span></div>
               <div class="stat-card-detail" id="stat-wind-dir">NW Direction</div>
             </div>
 
@@ -148,7 +163,7 @@
                 </svg>
                 Visibility
               </div>
-              <div class="stat-card-value"><span class="value-large" id="stat-vis">10</span> mi</div>
+              <div class="stat-card-value"><span class="value-large" id="stat-vis">10</span> <span id="stat-vis-unit">mi</span></div>
               <div class="stat-card-detail" id="stat-vis-desc">Clear View</div>
             </div>
 
@@ -173,8 +188,8 @@
                 </svg>
               </div>
               <div class="forecast-day-temps" aria-hidden="true">
-                <span class="forecast-day-high">65°</span>
-                <span class="forecast-day-low">52°</span>
+                <span class="forecast-day-high">65&deg;</span>
+                <span class="forecast-day-low">52&deg;</span>
               </div>
             </div>
 
@@ -187,8 +202,8 @@
                 </svg>
               </div>
               <div class="forecast-day-temps" aria-hidden="true">
-                <span class="forecast-day-high">68°</span>
-                <span class="forecast-day-low">54°</span>
+                <span class="forecast-day-high">68&deg;</span>
+                <span class="forecast-day-low">54&deg;</span>
               </div>
             </div>
 
@@ -200,8 +215,8 @@
                 </svg>
               </div>
               <div class="forecast-day-temps" aria-hidden="true">
-                <span class="forecast-day-high">59°</span>
-                <span class="forecast-day-low">48°</span>
+                <span class="forecast-day-high">59&deg;</span>
+                <span class="forecast-day-low">48&deg;</span>
               </div>
             </div>
 
@@ -213,8 +228,8 @@
                 </svg>
               </div>
               <div class="forecast-day-temps" aria-hidden="true">
-                <span class="forecast-day-high">60°</span>
-                <span class="forecast-day-low">49°</span>
+                <span class="forecast-day-high">60&deg;</span>
+                <span class="forecast-day-low">49&deg;</span>
               </div>
             </div>
 
@@ -226,8 +241,8 @@
                 </svg>
               </div>
               <div class="forecast-day-temps" aria-hidden="true">
-                <span class="forecast-day-high">63°</span>
-                <span class="forecast-day-low">51°</span>
+                <span class="forecast-day-high">63&deg;</span>
+                <span class="forecast-day-low">51&deg;</span>
               </div>
             </div>
 
@@ -240,8 +255,8 @@
                 </svg>
               </div>
               <div class="forecast-day-temps" aria-hidden="true">
-                <span class="forecast-day-high">70°</span>
-                <span class="forecast-day-low">55°</span>
+                <span class="forecast-day-high">70&deg;</span>
+                <span class="forecast-day-low">55&deg;</span>
               </div>
             </div>
 
@@ -254,8 +269,8 @@
                 </svg>
               </div>
               <div class="forecast-day-temps" aria-hidden="true">
-                <span class="forecast-day-high">72°</span>
-                <span class="forecast-day-low">56°</span>
+                <span class="forecast-day-high">72&deg;</span>
+                <span class="forecast-day-low">56&deg;</span>
               </div>
             </div>
 
@@ -282,3 +297,5 @@
   </script>
 </body>
 </html>
+
+
