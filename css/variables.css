@@ -1,0 +1,120 @@
+/* ============================================
+   DESIGN TOKENS — Extracted from Figma API
+   Weather Dashboard Design System
+   ============================================ */
+
+:root {
+  /* ── Primary Palette ── */
+  --color-primary: #5D5FEF;
+  --color-primary-dark: #4343D5;
+  --color-primary-deeper: #4338CA;
+  --color-primary-light: #EEF2FF;
+  --color-primary-hover: #4F46E5;
+
+  /* ── Text Colors ── */
+  --color-text-primary: #191C1E;
+  --color-text-secondary: #464555;
+  --color-text-muted: #64748B;
+  --color-text-placeholder: #C7C4D7;
+  --color-text-on-primary: #FFFFFF;
+
+  /* ── Semantic Colors ── */
+  --color-info: #005AA3;
+  --color-info-dark: #004883;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #BA1A1A;
+  --color-danger-light: #FEE2E2;
+
+  /* ── Surface Colors ── */
+  --color-bg: #F7F9FB;
+  --color-card: #FFFFFF;
+  --color-card-hover: #F1F5F9;
+  --color-border: #E2E8F0;
+  --color-border-light: #F1F5F9;
+  --color-sidebar-bg: #FFFFFF;
+
+  /* ── Chart Colors (Color-blind safe palette) ── */
+  --chart-blue: #2563EB;
+  --chart-orange: #EA580C;
+  --chart-teal: #0D9488;
+  --chart-purple: #7C3AED;
+  --chart-pink: #DB2777;
+
+  /* ── Typography ── */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.5rem;     /* 24px */
+  --font-size-2xl: 2rem;      /* 32px */
+  --font-size-3xl: 2.5rem;    /* 40px */
+  --font-size-hero: 5.5rem;   /* 88px */
+
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+
+  /* ── Spacing (from Figma) ── */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+
+  /* ── Layout ── */
+  --sidebar-width: 256px;
+  --content-padding: var(--space-10);
+  --card-gap: var(--space-6);
+
+  /* ── Borders ── */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* ── Shadows (from Figma) ── */
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.04), 0 6px 30px rgba(0, 0, 0, 0.04);
+  --shadow-sidebar: 0 1px 10px rgba(0, 0, 0, 0.04), 0 4px 25px rgba(0, 0, 0, 0.03);
+  --shadow-hover: 0 4px 12px rgba(93, 95, 239, 0.15);
+  --shadow-focus: 0 0 0 3px rgba(93, 95, 239, 0.4);
+
+  /* ── Transitions ── */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 350ms ease;
+
+  /* ── Focus ── */
+  --focus-ring: 3px solid var(--color-primary);
+  --focus-ring-offset: 2px;
+
+  /* ── Z-Index ── */
+  --z-sidebar: 100;
+  --z-header: 200;
+  --z-modal: 300;
+  --z-skip-nav: 999;
+}
+
+/* ── High Contrast Mode ── */
+@media (prefers-contrast: more) {
+  :root {
+    --color-text-primary: #000000;
+    --color-text-secondary: #1A1A1A;
+    --color-text-muted: #333333;
+    --color-border: #000000;
+    --color-primary: #3730A3;
+    --shadow-card: 0 0 0 2px #000000;
+    --shadow-sidebar: 0 0 0 2px #000000;
+  }
+}
