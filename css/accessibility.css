@@ -3,7 +3,7 @@
    WCAG 2.1 AA Compliant
    ============================================ */
 
-/* ── Skip Navigation ── */
+/* â”€â”€ Skip Navigation â”€â”€ */
 .skip-nav {
   position: fixed;
   top: -100%;
@@ -25,7 +25,7 @@
   outline-offset: var(--focus-ring-offset);
 }
 
-/* ── Screen Reader Only ── */
+/* â”€â”€ Screen Reader Only â”€â”€ */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -51,7 +51,7 @@
   white-space: normal;
 }
 
-/* ── Focus Indicators ── */
+/* â”€â”€ Focus Indicators â”€â”€ */
 .focus-ring:focus-visible {
   outline: var(--focus-ring);
   outline-offset: var(--focus-ring-offset);
@@ -64,7 +64,7 @@
   outline-offset: 2px;
 }
 
-/* ── Reduced Motion ── */
+/* â”€â”€ Reduced Motion â”€â”€ */
 @media (prefers-reduced-motion: reduce) {
   .animate {
     animation: none !important;
@@ -72,7 +72,7 @@
   }
 }
 
-/* ── ARIA Live Region (for dynamic announcements) ── */
+/* â”€â”€ ARIA Live Region (for dynamic announcements) â”€â”€ */
 .aria-live-region {
   position: absolute;
   width: 1px;
@@ -85,7 +85,7 @@
   border: 0;
 }
 
-/* ── Color Blind Helper Patterns ── */
+/* â”€â”€ Color Blind Helper Patterns â”€â”€ */
 /* Used alongside colors to provide pattern-based differentiation */
 .pattern-dots {
   background-image: radial-gradient(circle, currentColor 1px, transparent 1px);
@@ -109,7 +109,7 @@
   background-size: 6px 6px;
 }
 
-/* ── Minimum Touch/Click Target ── */
+/* â”€â”€ Minimum Touch/Click Target â”€â”€ */
 /* Ensure all interactive elements have at least 44x44px hit area */
 .touch-target {
   position: relative;
@@ -120,14 +120,14 @@
   justify-content: center;
 }
 
-/* ── Text Spacing Override Support ── */
+/* â”€â”€ Text Spacing Override Support â”€â”€ */
 /* WCAG 1.4.12 - Content should not be lost with text spacing adjustments */
 body {
   word-spacing: normal;
   letter-spacing: normal;
 }
 
-/* ── Forced Colors / Windows High Contrast Mode ── */
+/* â”€â”€ Forced Colors / Windows High Contrast Mode â”€â”€ */
 @media (forced-colors: active) {
   .card,
   .stat-card,
@@ -150,3 +150,4 @@ body {
     border: 2px solid ButtonText;
   }
 }
+
