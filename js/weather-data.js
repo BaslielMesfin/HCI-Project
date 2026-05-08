@@ -61,7 +61,7 @@ const WeatherData = {
   detailedForecast: {
     location: 'Kyoto, Japan',
     today: {
-      date: 'Today, Oct 24',
+      date: 'Today, Nov 24',
       temp: 72,
       low: 58,
       condition: 'Breezy with scattered clouds',
@@ -71,9 +71,9 @@ const WeatherData = {
       night: { temp: 58, precip: 5, icon: 'clear-night' }
     },
     upcoming: [
-      { date: 'Fri, Oct 25', icon: 'rainy', high: 65, low: 50, barStart: 30, barWidth: 35, barColor: 'var(--chart-blue)' },
-      { date: 'Sat, Oct 26', icon: 'sunny', high: 78, low: 55, barStart: 35, barWidth: 45, barColor: 'linear-gradient(90deg, var(--chart-purple), var(--chart-pink))' },
-      { date: 'Sun, Oct 27', icon: 'cloudy', high: 70, low: 54, barStart: 32, barWidth: 35, barColor: 'var(--color-text-muted)' }
+      { date: 'Fri, Nov 25', icon: 'rainy', high: 65, low: 50, barStart: 30, barWidth: 35, barColor: 'var(--chart-blue)' },
+      { date: 'Sat, Nov 26', icon: 'sunny', high: 78, low: 55, barStart: 35, barWidth: 45, barColor: 'linear-gradient(90deg, var(--chart-purple), var(--chart-pink))' },
+      { date: 'Sun, Nov 27', icon: 'cloudy', high: 70, low: 54, barStart: 32, barWidth: 35, barColor: 'var(--color-text-muted)' }
     ],
     weeklyTrends: {
       labels: ['T', 'F', 'S', 'S', 'M', 'T', 'W'],
