@@ -1,47 +1,59 @@
 /* ============================================
-   DESIGN TOKENS — Extracted from Figma API
+   DESIGN TOKENS - Extracted from Figma API
    Weather Dashboard Design System
    ============================================ */
 
 :root {
-  /* ── Primary Palette ── */
-  --color-primary: #5D5FEF;
-  --color-primary-dark: #4343D5;
-  --color-primary-deeper: #4338CA;
-  --color-primary-light: #EEF2FF;
-  --color-primary-hover: #4F46E5;
+  /* â”€â”€ Primary Palette â”€â”€ */
+  --color-primary: #2563EB;
+  --color-primary-dark: #1D4ED8;
+  --color-primary-deeper: #1E40AF;
+  --color-primary-light: #DBEAFE;
+  --color-primary-hover: #1E40AF;
 
-  /* ── Text Colors ── */
+  /* â”€â”€ Text Colors â”€â”€ */
   --color-text-primary: #191C1E;
   --color-text-secondary: #464555;
   --color-text-muted: #64748B;
   --color-text-placeholder: #C7C4D7;
   --color-text-on-primary: #FFFFFF;
 
-  /* ── Semantic Colors ── */
+  /* â”€â”€ Semantic Colors â”€â”€ */
   --color-info: #005AA3;
+  --color-info-light: #E0F2FE;
   --color-info-dark: #004883;
   --color-success: #16A34A;
   --color-warning: #D97706;
   --color-danger: #BA1A1A;
   --color-danger-light: #FEE2E2;
 
-  /* ── Surface Colors ── */
-  --color-bg: #F7F9FB;
+  /* â”€â”€ Surface Colors â”€â”€ */
+  --color-bg: #F4F7FA;
   --color-card: #FFFFFF;
   --color-card-hover: #F1F5F9;
   --color-border: #E2E8F0;
   --color-border-light: #F1F5F9;
   --color-sidebar-bg: #FFFFFF;
 
-  /* ── Chart Colors (Color-blind safe palette) ── */
+  /* â”€â”€ Dark Mode Colors â”€â”€ */
+  --color-bg-dark: #0B1220;
+  --color-card-dark: #121C2D;
+  --color-card-hover-dark: #1A2940;
+  --color-border-dark: #3A4A63;
+  --color-border-light-dark: #23344D;
+  --color-sidebar-bg-dark: #101A2A;
+  --color-text-primary-dark: #F8FAFC;
+  --color-text-secondary-dark: #D7E0EA;
+  --color-text-muted-dark: #A9B8CC;
+
+  /* â”€â”€ Chart Colors (Color-blind safe palette) â”€â”€ */
   --chart-blue: #2563EB;
   --chart-orange: #EA580C;
   --chart-teal: #0D9488;
   --chart-purple: #7C3AED;
   --chart-pink: #DB2777;
 
-  /* ── Typography ── */
+  /* â”€â”€ Typography â”€â”€ */
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
@@ -62,7 +74,7 @@
   --line-height-normal: 1.5;
   --line-height-relaxed: 1.75;
 
-  /* ── Spacing (from Figma) ── */
+  /* â”€â”€ Spacing (from Figma) â”€â”€ */
   --space-1: 0.25rem;   /* 4px */
   --space-2: 0.5rem;    /* 8px */
   --space-3: 0.75rem;   /* 12px */
@@ -72,41 +84,41 @@
   --space-8: 2rem;      /* 32px */
   --space-10: 2.5rem;   /* 40px */
 
-  /* ── Layout ── */
+  /* â”€â”€ Layout â”€â”€ */
   --sidebar-width: 256px;
   --content-padding: var(--space-10);
   --card-gap: var(--space-6);
 
-  /* ── Borders ── */
+  /* â”€â”€ Borders â”€â”€ */
   --radius-sm: 6px;
   --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
+  --radius-lg: 8px;
+  --radius-xl: 10px;
   --radius-full: 9999px;
 
-  /* ── Shadows (from Figma) ── */
-  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.04), 0 6px 30px rgba(0, 0, 0, 0.04);
+  /* â”€â”€ Shadows (from Figma) â”€â”€ */
+  --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.06), 0 12px 26px rgba(15, 23, 42, 0.06);
   --shadow-sidebar: 0 1px 10px rgba(0, 0, 0, 0.04), 0 4px 25px rgba(0, 0, 0, 0.03);
-  --shadow-hover: 0 4px 12px rgba(93, 95, 239, 0.15);
-  --shadow-focus: 0 0 0 3px rgba(93, 95, 239, 0.4);
+  --shadow-hover: 0 10px 24px rgba(37, 99, 235, 0.14);
+  --shadow-focus: 0 0 0 3px rgba(37, 99, 235, 0.38);
 
-  /* ── Transitions ── */
+  /* â”€â”€ Transitions â”€â”€ */
   --transition-fast: 150ms ease;
   --transition-normal: 250ms ease;
   --transition-slow: 350ms ease;
 
-  /* ── Focus ── */
+  /* â”€â”€ Focus â”€â”€ */
   --focus-ring: 3px solid var(--color-primary);
   --focus-ring-offset: 2px;
 
-  /* ── Z-Index ── */
+  /* â”€â”€ Z-Index â”€â”€ */
   --z-sidebar: 100;
   --z-header: 200;
   --z-modal: 300;
   --z-skip-nav: 999;
 }
 
-/* ── High Contrast Mode ── */
+/* â”€â”€ High Contrast Mode â”€â”€ */
 @media (prefers-contrast: more) {
   :root {
     --color-text-primary: #000000;
@@ -118,3 +130,22 @@
     --shadow-sidebar: 0 0 0 2px #000000;
   }
 }
+
+/* â”€â”€ Dark Mode â”€â”€ */
+body.dark-mode {
+  --color-bg: var(--color-bg-dark);
+  --color-card: var(--color-card-dark);
+  --color-card-hover: var(--color-card-hover-dark);
+  --color-border: var(--color-border-dark);
+  --color-border-light: var(--color-border-light-dark);
+  --color-sidebar-bg: var(--color-sidebar-bg-dark);
+  --color-text-primary: var(--color-text-primary-dark);
+  --color-text-secondary: var(--color-text-secondary-dark);
+  --color-text-muted: var(--color-text-muted-dark);
+  --color-primary-light: #17345C;
+  --color-info-light: #12324A;
+  --color-danger-light: #3D171C;
+  --shadow-card: 0 1px 0 rgba(255, 255, 255, 0.04), 0 16px 34px rgba(0, 0, 0, 0.26);
+  --shadow-hover: 0 12px 28px rgba(37, 99, 235, 0.2);
+}
+
